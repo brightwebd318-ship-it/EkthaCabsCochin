@@ -69,12 +69,14 @@
     }
 
     .booking-header h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
+        padding: 0 1rem;
     }
 
     .booking-card {
-        padding: 2rem 1.5rem;
+        padding: 2.5rem 1.5rem;
         border-radius: 1.5rem;
+        margin: 0 1rem;
     }
 
     .form-grid {
@@ -83,33 +85,50 @@
 
     /* Mobile adjustments for booking confirmation */
     .success-badge {
-        font-size: 3.5rem;
+        font-size: 4rem;
+        margin-bottom: 1rem;
     }
 
     .confirmation-header h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
     }
 
     .confirmation-body p {
         font-size: 1rem;
         margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
     }
 
     .next-steps {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
+        padding: 1.5rem 1rem;
+        margin-bottom: 2.5rem;
+        width: 100%;
     }
 
     .next-steps h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+
+    .next-steps ul {
+        padding-left: 1.2rem;
     }
 
     .next-steps li {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .contact-info-compact {
+        padding: 1.5rem 1rem;
+        margin: 2rem 0;
+        gap: 1rem;
     }
 
     .contact-link {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 }
 
