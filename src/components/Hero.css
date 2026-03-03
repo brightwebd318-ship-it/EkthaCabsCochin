@@ -150,6 +150,26 @@
         margin-top: 2rem;
         padding: 2rem 1.5rem;
     }
+
+    /* Mobile adjustments for inquiry confirmation */
+    .confirmation-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .confirmation-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-info-compact {
+        padding: 1.25rem 1rem;
+        margin: 1rem 0;
+        gap: 0.6rem;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+    }
 }
 
 .form-row {
