@@ -94,6 +94,7 @@
 .whatsapp-link {
     color: #25d366 !important;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .whatsapp-link:hover {
