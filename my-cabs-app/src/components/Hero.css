@@ -141,6 +141,12 @@
         display: block;
     }
 
+    .hero-video-iframe {
+        min-height: 150vh;
+        min-width: 266vh; /* 150vh * 16:9 */
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
