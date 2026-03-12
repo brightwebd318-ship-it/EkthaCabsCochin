@@ -14,6 +14,19 @@ const Hero = ({ heroImage }) => {
     return (
         <section id="home" className="hero">
             <div className="hero-overlay"></div>
+            
+            {/* Video Background Container */}
+            <div className="hero-video-container">
+                <iframe
+                    className="hero-video-iframe"
+                    src="https://www.youtube.com/embed/-H2kZs8dd2k?autoplay=1&mute=1&loop=1&playsinline=1&controls=0&showinfo=0&autohide=1&playlist=-H2kZs8dd2k&rel=0&iv_load_policy=3&enablejsapi=1"
+                    title="Background Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+            </div>
+
             <img src={heroImage || 'https://images.unsplash.com/photo-1559291071-70c0e231188e?auto=format&fit=crop&q=80&w=2670'} alt="Premium Cab Service" className="hero-bg" />
 
             <div className="container hero-content">
