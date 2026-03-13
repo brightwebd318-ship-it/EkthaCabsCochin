@@ -38,7 +38,7 @@ const Footer = () => {
 
             <div className="footer-bottom">
                 <div className="container">
-                    <p>© 2026 EkthaCabsCochin. All rights reserved. Designed for Excellence.</p>
+                    <p>© 2026 EkthaCabsCochin. All rights reserved. Designed for <a href="https://brightwebd.com/" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>BrightWebD 31:8</a>.</p>
                 </div>
             </div>
         </footer>
