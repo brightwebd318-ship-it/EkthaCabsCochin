@@ -6,17 +6,19 @@ import FloatingCallButton from './components/FloatingCallButton';
 import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
 import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
+import FleetPage from './pages/FleetPage';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
-    <Router basename="/EkthaCabsCochin">
+    <Router basename={process.env.PUBLIC_URL || '/'}>
       <ScrollToTop />
       <div className="App">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/fleet" element={<FleetPage />} />
           <Route path="/book" element={<BookingPage />} />
         </Routes>
         <Footer />

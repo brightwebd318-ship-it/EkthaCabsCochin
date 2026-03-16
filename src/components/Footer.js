@@ -18,6 +18,7 @@ const Footer = () => {
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="/EkthaCabsCochin/fleet">Our Gallery</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -37,7 +38,7 @@ const Footer = () => {
 
             <div className="footer-bottom">
                 <div className="container">
-                    <p>© 2026 EkthaCabsCochin. All rights reserved. Designed for Excellence.</p>
+                    <p>© 2026 EkthaCabsCochin. All rights reserved. Designed for <a href="https://brightwebd.com/" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>BrightWebD 31:8</a>.</p>
                 </div>
             </div>
         </footer>
