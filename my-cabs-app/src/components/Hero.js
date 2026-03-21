@@ -1,9 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import video1 from '../EkthaHero1.mp4';
+import video2 from '../EkthaHero2.mp4';
+import video3 from '../EkthaHero3.mp4';
 import './Hero.css';
 
 const Hero = ({ heroImage }) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [currentVideo, setCurrentVideo] = useState(0);
+    
+    const videos = [video1, video2, video3];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentVideo((prev) => (prev + 1) % videos.length);
+        }, 8000); // Change video every 8 seconds
+        return () => clearInterval(timer);
+    }, [videos.length]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,16 +28,21 @@ const Hero = ({ heroImage }) => {
         <section id="home" className="hero">
             <div className="hero-overlay"></div>
             
-            {/* Video Background Container */}
+            {/* Video Background Slider */}
             <div className="hero-video-container">
-                <iframe
-                    className="hero-video-iframe"
-                    src="https://www.youtube.com/embed/-H2kZs8dd2k?autoplay=1&mute=1&loop=1&playsinline=1&controls=0&showinfo=0&autohide=1&playlist=-H2kZs8dd2k&rel=0&iv_load_policy=3&enablejsapi=1"
-                    title="Background Video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                ></iframe>
+                {videos.map((video, index) => (
+                    <video
+                        key={index}
+                        className={`hero-video-item ${index === currentVideo ? 'active' : ''}`}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                    >
+                        <source src={video} type="video/mp4" />
+                    </video>
+                ))}
             </div>
 
             <img src={heroImage || 'https://images.unsplash.com/photo-1559291071-70c0e231188e?auto=format&fit=crop&q=80&w=2670'} alt="Premium Cab Service" className="hero-bg" />

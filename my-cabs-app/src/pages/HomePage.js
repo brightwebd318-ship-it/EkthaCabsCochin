@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
+import VideoGallery from '../components/VideoGallery';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 
@@ -21,6 +22,7 @@ const HomePage = () => {
     return (
         <main>
             <Hero />
+            <VideoGallery />
             <Services />
             <WhyChooseUs />
         </main>

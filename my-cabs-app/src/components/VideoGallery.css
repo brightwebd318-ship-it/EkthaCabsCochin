@@ -1,0 +1,142 @@
+.video-gallery-section {
+    padding: 80px 0;
+    background: var(--bg-main);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.video-swiper {
+    padding-bottom: 50px !important;
+}
+
+.video-card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #000;
+    cursor: pointer;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 133%; /* 3:4 Aspect Ratio */
+}
+
+.gallery-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    transition: opacity 0.3s ease;
+}
+
+.video-caption h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.video-caption p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Swiper Navigation & Pagination Premium Styles */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary) !important;
+    background: rgba(255, 255, 255, 0.05);
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: var(--primary);
+    color: var(--secondary) !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+    background: var(--primary) !important;
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 30px !important;
+    border-radius: 5px !important;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .video-gallery-section {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .video-wrapper {
+        padding-top: 150%; /* Taller for mobile */
+    }
+    
+    .video-card:hover {
+        transform: none; /* Disable hover scale on mobile */
+    }
+}
