@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/EkthaCabsCochin/static/css/main.f8f89beb.css",
-    "main.js": "/EkthaCabsCochin/static/js/main.10d750d6.js",
+    "main.css": "/EkthaCabsCochin/static/css/main.6fa222f3.css",
+    "main.js": "/EkthaCabsCochin/static/js/main.c8af7c66.js",
     "static/js/453.8b5d9ba8.chunk.js": "/EkthaCabsCochin/static/js/453.8b5d9ba8.chunk.js",
+    "static/media/EkthaHero1.mp4": "/EkthaCabsCochin/static/media/EkthaHero1.cc2c99a83a9e70ba3cb0.mp4",
+    "static/media/EkthaHero3.mp4": "/EkthaCabsCochin/static/media/EkthaHero3.a882935e356b56b293e3.mp4",
+    "static/media/EkthaHero2.mp4": "/EkthaCabsCochin/static/media/EkthaHero2.10b90d9fbb88b3aed2dc.mp4",
     "index.html": "/EkthaCabsCochin/index.html",
-    "main.f8f89beb.css.map": "/EkthaCabsCochin/static/css/main.f8f89beb.css.map",
-    "main.10d750d6.js.map": "/EkthaCabsCochin/static/js/main.10d750d6.js.map",
+    "main.6fa222f3.css.map": "/EkthaCabsCochin/static/css/main.6fa222f3.css.map",
+    "main.c8af7c66.js.map": "/EkthaCabsCochin/static/js/main.c8af7c66.js.map",
     "453.8b5d9ba8.chunk.js.map": "/EkthaCabsCochin/static/js/453.8b5d9ba8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8f89beb.css",
-    "static/js/main.10d750d6.js"
+    "static/css/main.6fa222f3.css",
+    "static/js/main.c8af7c66.js"
   ]
 }
