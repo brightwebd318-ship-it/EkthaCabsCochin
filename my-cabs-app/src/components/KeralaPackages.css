@@ -1,0 +1,384 @@
+.kerala-packages {
+    padding: 140px 0;
+    background: linear-gradient(165deg, #0A0A0A 0%, #0B1D26 50%, #112F3B 100%);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+/* Elegant Background Accents */
+.kerala-packages::before,
+.kerala-packages::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 0;
+}
+
+.kerala-packages::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+    top: -200px;
+    right: -100px;
+    opacity: 0.6;
+}
+
+.kerala-packages::after {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(245, 230, 200, 0.08) 0%, transparent 70%);
+    bottom: 100px;
+    left: -150px;
+    opacity: 0.5;
+}
+
+.kerala-packages .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Premium Glass Card with Luxury Feel */
+.packages-content {
+    background: rgba(15, 29, 38, 0.40);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 80px;
+    border-radius: 0;
+    box-shadow: 0 25px 80px -20px rgba(0, 0, 0, 0.4);
+    animation: fadeUp 0.8s ease-out forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.packages-content::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+}
+
+.tagline-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.highlight-icon {
+    color: #D4AF37;
+    font-weight: 300;
+}
+
+.tagline-text {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #D4AF37;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kerala-packages .section-title {
+    font-size: clamp(1.6rem, 4.5vw, 56px);
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.3;
+    margin-bottom: 28px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.kerala-packages .section-title .highlight {
+    color: #D4AF37;
+    position: relative;
+    font-weight: 700;
+}
+
+.kerala-packages .subheading {
+    font-size: 16px;
+    color: #B8B8B8;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.btn-primary {
+    background: #D4AF37;
+    color: #0A0A0A;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    position: relative;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #E5C158;
+    transform: scale(1.05);
+    box-shadow: 0 10px 24px rgba(212, 175, 55, 0.4);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-outline {
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);
+}
+
+.btn-outline:hover {
+    color: #0A0A0A;
+    background: #D4AF37;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
+
+.btn-outline:active {
+    transform: scale(0.98);
+}
+
+/* Modern Premium Image Slider */
+.packages-slider {
+    position: relative;
+    height: 700px;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.5);
+}
+
+.premium-tour-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.destination-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.destination-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.swiper-slide-active .destination-image {
+    transform: scale(1.03);
+}
+
+.image-overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.85) 0%, rgba(10, 10, 10, 0.4) 50%, transparent 100%);
+}
+
+.destination-overlay-text {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: white;
+    z-index: 10;
+}
+
+.destination-name-title {
+    font-size: 48px;
+    font-weight: 300;
+    margin: 0;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Premium Slider Controls */
+.slider-nav-overlay {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    gap: 16px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.nav-btn-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #D4AF37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.33, 0.66, 0.66, 1);
+    pointer-events: auto;
+}
+
+.nav-btn-circle:hover {
+    background: #D4AF37;
+    color: #0A0A0A;
+    border-color: #D4AF37;
+    transform: scale(1.1);
+}
+
+/* Premium Swiper Pagination */
+.site-bullet {
+    background: rgba(255, 255, 255, 0.3) !important;
+    opacity: 1 !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 0 !important;
+}
+
+.site-bullet-active {
+    background: #D4AF37 !important;
+    transform: scaleX(2.5);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Premium Mobile Responsive */
+@media (max-width: 1024px) {
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .packages-content {
+        padding: 60px;
+    }
+
+    .kerala-packages .section-title {
+        font-size: 42px;
+    }
+    
+    .packages-slider {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kerala-packages {
+        padding: 80px 0;
+    }
+
+    .packages-content {
+        padding: 40px;
+    }
+
+    .kerala-packages .section-title {
+        font-size: 32px;
+    }
+
+    .kerala-packages .subheading {
+        font-size: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .packages-slider {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kerala-packages {
+        padding: 60px 0;
+    }
+    
+    .packages-content {
+        padding: 24px 18px;
+    }
+    
+    .kerala-packages .section-title {
+        font-size: clamp(1.4rem, 5.5vw, 1.8rem);
+    }
+    
+    .destination-name-title {
+        font-size: 28px;
+    }
+
+    .destination-overlay-text {
+        bottom: 24px;
+        left: 24px;
+    }
+
+    .slider-nav-overlay {
+        bottom: 24px;
+        right: 24px;
+    }
+}
+

@@ -13,12 +13,15 @@
     color: #ffffff;
     margin-bottom: 15px;
     font-weight: 700;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.4px;
 }
 
 .section-header p {
     font-size: 1.1rem;
     color: var(--text-muted);
+    line-height: 1.7;
+    letter-spacing: 0.2px;
 }
 
 .container {
@@ -78,11 +81,14 @@
     font-size: 1.5rem;
     margin-bottom: 5px;
     font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .video-caption p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
     margin: 0;
 }
 

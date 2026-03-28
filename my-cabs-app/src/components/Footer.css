@@ -12,11 +12,12 @@
 }
 
 .footer-logo {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: #ffffff;
+    letter-spacing: 0.3px;
 }
 
 .footer-logo span {
@@ -27,12 +28,16 @@
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.8;
+    letter-spacing: 0.2px;
+    font-weight: 400;
 }
 
 .footer h4 {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     position: relative;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .footer h4::after {
@@ -107,6 +112,7 @@
     text-align: center;
     color: var(--text-muted);
     font-size: 0.85rem;
+    letter-spacing: 0.2px;
 }
 
 @media (max-width: 768px) {

@@ -2,6 +2,11 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import VideoGallery from '../components/VideoGallery';
+import KeralaPackages from '../components/KeralaPackages';
+import SabarimalaService from '../components/SabarimalaService';
+import LocalSightseeing from '../components/LocalSightseeing';
+import GallerySection from '../components/GallerySection';
+import VehicleSlider from '../components/VehicleSlider';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 
@@ -23,6 +28,11 @@ const HomePage = () => {
         <main>
             <Hero />
             <VideoGallery />
+            <KeralaPackages />
+            <SabarimalaService />
+            <LocalSightseeing />
+            <GallerySection />
+            <VehicleSlider />
             <Services />
             <WhyChooseUs />
         </main>

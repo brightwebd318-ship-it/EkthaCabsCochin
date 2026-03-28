@@ -1,0 +1,291 @@
+/* =======================================
+   VEHICLE SHOWCASE SLIDER
+   ======================================= */
+
+.vs-section {
+    position: relative;
+    padding: 7rem 0 8rem;
+    background: linear-gradient(180deg, #020617 0%, #060e1c 50%, #020617 100%);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.85s ease, transform 0.85s ease;
+}
+.vs-section.vs-visible { opacity: 1; transform: translateY(0); }
+
+.vs-bg-glow {
+    position: absolute;
+    bottom: -80px; left: 50%;
+    transform: translateX(-50%);
+    width: 800px; height: 600px;
+    background: radial-gradient(ellipse, rgba(212,175,55,0.07) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+/* ── Header ── */
+.vs-header { text-align: center; margin-bottom: 3rem; }
+.vs-badge {
+    display: inline-block;
+    background: rgba(212,175,55,0.12);
+    color: var(--primary);
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 100px;
+    padding: 0.35rem 1.1rem;
+    font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+.vs-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    font-weight: 800; color: #fff;
+    margin-bottom: 0.85rem;
+    letter-spacing: -0.02em; line-height: 1.15;
+}
+.vs-highlight { color: var(--primary); text-shadow: 0 0 28px rgba(212,175,55,0.35); }
+.vs-subtitle {
+    color: var(--text-muted); font-size: 1.05rem;
+    max-width: 520px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── Tabs ── */
+.vs-tabs {
+    display: flex; justify-content: center; gap: 0.75rem;
+    flex-wrap: wrap; margin-bottom: 2.5rem;
+}
+.vs-tab {
+    display: flex; align-items: center; gap: 0.45rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.04);
+    color: var(--text-muted);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem; font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.vs-tab:hover { border-color: rgba(212,175,55,0.4); color: var(--primary); }
+.vs-tab-active {
+    background: rgba(212,175,55,0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 16px rgba(212,175,55,0.2);
+}
+.vs-tab-icon { font-size: 1.1rem; }
+.vs-tab-label { font-weight: 600; }
+
+/* ── Showcase Card ── */
+.vs-showcase {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(11,29,38,0.7), rgba(15,23,42,0.5));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    animation: vs-slide-in 0.5s ease;
+}
+@keyframes vs-slide-in {
+    from { opacity: 0; transform: translateX(20px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Image column */
+.vs-img-col { position: relative; }
+.vs-img-wrapper {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.vs-img {
+    width: 100%; height: 320px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.vs-img-wrapper:hover .vs-img { transform: scale(1.04); }
+.vs-vehicle-tag {
+    position: absolute;
+    top: 1rem; left: 1rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 100px;
+    font-size: 0.78rem; font-weight: 700;
+    border: 1px solid;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(8px);
+}
+
+/* Info column */
+.vs-info-col { display: flex; flex-direction: column; gap: 1.25rem; }
+.vs-icon-big { font-size: 2.5rem; line-height: 1; }
+.vs-vehicle-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 800; color: #fff;
+    margin: 0; line-height: 1.1;
+}
+.vs-vehicle-model {
+    font-size: 0.95rem; color: var(--text-muted);
+    margin: 0; font-weight: 400;
+}
+.vs-seats-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(212,175,55,0.12);
+    border: 1px solid rgba(212,175,55,0.25);
+    color: var(--primary);
+    font-size: 0.88rem; font-weight: 600;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    width: fit-content;
+}
+.vs-features { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.vs-feature-chip {
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-muted);
+    font-size: 0.82rem; font-weight: 500;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Book & Gallery buttons */
+.vs-action-row {
+    display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;
+}
+
+.vs-gallery-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.15);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem; font-weight: 600;
+    padding: 0.85rem 1.6rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.vs-gallery-btn:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.vs-book-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem; font-weight: 700;
+    padding: 0.85rem 1.8rem;
+    border-radius: 100px;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(37,211,102,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vs-book-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 28px rgba(37,211,102,0.45);
+    color: #fff; text-decoration: none;
+}
+.vs-wa-icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* Image Hover Hint */
+.vs-img-col {
+    position: relative;
+    cursor: pointer;
+    border-radius: 1.5rem;
+}
+.vs-img-hover-hint {
+    position: absolute; inset: 0;
+    background: rgba(2,6,23,0.5);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 1.5rem;
+}
+.vs-img-col:hover .vs-img-hover-hint { opacity: 1; }
+.vs-img-hover-hint span {
+    background: rgba(255,255,255,0.9);
+    color: #000;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700; font-size: 0.9rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 100px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+.vs-img-col:hover .vs-img-hover-hint span { transform: translateY(0); }
+
+/* ── Dots ── */
+.vs-dots {
+    display: flex; justify-content: center; gap: 0.55rem; margin-top: 2rem;
+}
+.vs-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,0.2); border: none; cursor: pointer; padding: 0;
+    transition: all 0.3s ease;
+}
+.vs-dot-active {
+    background: var(--primary); width: 24px; border-radius: 4px;
+    box-shadow: 0 0 8px rgba(212,175,55,0.5);
+}
+
+/* View All CTA */
+.vs-view-all-row {
+    text-align: center;
+    margin-top: 2rem;
+}
+.vs-view-all-btn {
+    background: transparent;
+    color: var(--primary);
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem; font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 2px;
+}
+.vs-view-all-btn::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.vs-view-all-btn:hover::after { transform: scaleX(1); }
+
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+    .vs-showcase {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.75rem;
+        gap: 2rem;
+    }
+    .vs-img { height: 260px; }
+    .vs-info-col { align-items: center; text-align: center; }
+    .vs-seats-badge { align-self: center; }
+    .vs-features { justify-content: center; }
+    .vs-action-row { justify-content: center; }
+}
+@media (max-width: 768px) {
+    .vs-section { padding: 4.5rem 0 5.5rem; }
+    .vs-tabs { gap: 0.5rem; }
+    .vs-tab { padding: 0.5rem 0.9rem; font-size: 0.82rem; }
+    .vs-tab-label { display: none; }
+    .vs-tab-icon { font-size: 1.3rem; }
+    .vs-showcase { border-radius: 1.25rem; padding: 1.5rem 1.25rem; }
+    .vs-img { height: 210px; }
+    .vs-gallery-btn, .vs-book-btn { width: 100%; max-width: 300px; justify-content: center; }
+}

@@ -9,6 +9,9 @@
     color: var(--text-muted);
     margin-bottom: 3rem;
     font-size: 1.1rem;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    font-weight: 400;
 }
 
 .features-list {
@@ -35,12 +38,15 @@
 .feature-item h4 {
     margin-bottom: 0.5rem;
     font-size: 1.15rem;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .feature-item p {
     color: var(--text-muted);
     font-size: 0.9rem;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
 }
 
 .why-image-wrapper {

@@ -1,22 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import video1 from '../EkthaHero1.mp4';
-import video2 from '../EkthaHero2.mp4';
-import video3 from '../EkthaHero3.mp4';
 import './Hero.css';
+import munnarImg from '../Kerala Tourism Images/Munnar.jpg';
+import thekkadyImg from '../Kerala Tourism Images/Thekkady.jpg';
+import alleppeyImg from '../Kerala Tourism Images/Alleppey.jpg';
+import varkalaImg from '../Kerala Tourism Images/Varakala.jpg';
+import thiruvananthapuramImg from '../Kerala Tourism Images/Thruvananthapuram.jpg';
+import kovalamImg from '../Kerala Tourism Images/Kovalam.jpg';
+import maduraiImg from '../Kerala Tourism Images/Madurai.jpg';
+import rameshwaramImg from '../Kerala Tourism Images/Rameshwaram.jpg';
+
 
 const Hero = ({ heroImage }) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [currentVideo, setCurrentVideo] = useState(0);
+    const [currentImage, setCurrentImage] = useState(0);
     
-    const videos = [video1, video2, video3];
+    const images = [
+        munnarImg,
+        thekkadyImg,
+        alleppeyImg,
+        varkalaImg,
+        thiruvananthapuramImg,
+        kovalamImg,
+        maduraiImg,
+        rameshwaramImg
+    ];
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentVideo((prev) => (prev + 1) % videos.length);
-        }, 8000); // Change video every 8 seconds
+            setCurrentImage((prev) => (prev + 1) % images.length);
+        }, 5000); // Change image every 5 seconds
         return () => clearInterval(timer);
-    }, [videos.length]);
+    }, [images.length]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,24 +43,20 @@ const Hero = ({ heroImage }) => {
         <section id="home" className="hero">
             <div className="hero-overlay"></div>
             
-            {/* Video Background Slider */}
-            <div className="hero-video-container">
-                {videos.map((video, index) => (
-                    <video
+            {/* Image Background Slider */}
+            <div className="hero-image-container">
+                {images.map((img, index) => (
+                    <img
                         key={index}
-                        className={`hero-video-item ${index === currentVideo ? 'active' : ''}`}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="auto"
-                    >
-                        <source src={video} type="video/mp4" />
-                    </video>
+                        src={img}
+                        alt={`Kerala Destination ${index + 1}`}
+                        className={`hero-image-item ${index === currentImage ? 'active' : ''}`}
+                        loading={index === 0 ? "eager" : "lazy"}
+                    />
                 ))}
             </div>
 
-            <img src={heroImage || 'https://images.unsplash.com/photo-1559291071-70c0e231188e?auto=format&fit=crop&q=80&w=2670'} alt="Premium Cab Service" className="hero-bg" />
+            {/* Remove static heroImage if it exists as we now have a slider */}
 
             <div className="container hero-content">
                 <div className="hero-text">
