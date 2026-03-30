@@ -2,6 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import './FleetPage.css';
 
+// Import high-res premium gallery images
+import swiftImg from '../premium vehicle gallery/swift.jpeg';
+import wagonrImg from '../premium vehicle gallery/wagonr.jpeg';
+import dzireImg from '../premium vehicle gallery/dzire.jpeg';
+import etiosImg from '../premium vehicle gallery/etios.jpeg';
+import innovaImg from '../premium vehicle gallery/innova.jpeg';
+import ertigaImg from '../premium vehicle gallery/ertiga.jpeg';
+import urbaniaImg from '../premium vehicle gallery/urbania.jpeg';
+
 const WA_BASE = 'https://wa.me/919072836004?text=Hello%2C%20I%20want%20to%20enquire%20about%20the%20';
 
 const vehicles = [
@@ -12,7 +21,7 @@ const vehicles = [
         seats: '4 Seater',
         tag: 'Economy',
         tagColor: '#38bdf8',
-        image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/159087/swift-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80',
+        image: swiftImg,
         description: 'Compact, fuel-efficient and perfect for city rides. The Swift offers a smooth, comfortable experience for 4 passengers with great economy for Kochi city travel.',
         features: ['AC', 'City Rides', 'Fuel Efficient', 'Compact'],
         icon: '🚗',
@@ -24,7 +33,7 @@ const vehicles = [
         seats: '4 Seater',
         tag: 'Spacious',
         tagColor: '#22d3ee',
-        image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/wagonr-exterior-right-front-three-quarter-57.jpeg?isig=0&q=80',
+        image: wagonrImg,
         description: 'Tall-boy design with surprising interior space. Great for short city trips, airport runs, and everyday commutes with easy ingress and egress.',
         features: ['AC', 'Tall Cabin', 'Easy Entry', 'Airport Runs'],
         icon: '🚙',
@@ -36,7 +45,7 @@ const vehicles = [
         seats: '4 Seater',
         tag: 'Comfortable',
         tagColor: '#a78bfa',
-        image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/45691/dzire-exterior-right-front-three-quarter-2.jpeg?isig=0&q=80',
+        image: dzireImg,
         description: 'A premium compact sedan loved for its spacious boot and comfortable ride. Popular choice for airport transfers, outstation trips, and business travel in Kochi.',
         features: ['AC', 'Large Boot', 'Smooth Ride', 'Outstation'],
         icon: '🚘',
@@ -48,7 +57,7 @@ const vehicles = [
         seats: '4 Seater',
         tag: 'Reliable',
         tagColor: '#34d399',
-        image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/45033/etios-exterior-right-front-three-quarter-2.jpeg?isig=0&q=80',
+        image: etiosImg,
         description: 'Toyota reliability at its best. The Etios offers a spacious cabin, excellent fuel economy, and a comfortable ride — ideal for long outstation tours from Kochi.',
         features: ['AC', 'Toyota Quality', 'Fuel Efficient', 'Long Tours'],
         icon: '🚖',
@@ -60,7 +69,7 @@ const vehicles = [
         seats: '6–7 Seater',
         tag: 'Most Popular',
         tagColor: '#D4AF37',
-        image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/51435/innova-crysta-exterior-right-front-three-quarter-138.jpeg?isig=0&q=80',
+        image: innovaImg,
         description: 'The ultimate family travel vehicle. The Innova Crysta combines generous space, powerful performance, and premium comfort — perfect for Kerala tours, family trips, and pilgrimages.',
         features: ['Dual AC', 'Premium Interior', 'Group Travel', 'Pilgrimage Tours'],
         icon: '🚐',
@@ -72,7 +81,7 @@ const vehicles = [
         seats: '6–7 Seater',
         tag: 'Family Favourite',
         tagColor: '#fb923c',
-        image: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/110731/ertiga-exterior-right-front-three-quarter-6.jpeg?isig=0&q=80',
+        image: ertigaImg,
         description: 'The Ertiga is a versatile 7-seater MPV that balances space and economy superbly. Ideal for family tours, outstation trips, and group rides from Kochi.',
         features: ['AC', '7-Seater', 'Fuel Efficient', 'Family SUV'],
         icon: '🚌',
@@ -211,7 +220,7 @@ const FleetPage = () => {
                         <div className="fp-urbania-img-col">
                             <div className="fp-urbania-img-wrapper">
                                 <img
-                                    src="https://imgd.aeplcdn.com/664x374/n/cw/ec/134061/urbania-exterior-right-front-three-quarter.jpeg?isig=0&q=80"
+                                    src={urbaniaImg}
                                     alt="Force Urbania Luxury Traveller"
                                     className="fp-urbania-img"
                                     loading="lazy"
