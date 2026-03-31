@@ -109,9 +109,12 @@ const KeralaTourPackages = () => {
     <div className="kerala-tour-packages-page">
       <header className="page-header">
         <div className="container">
-          <div className="tagline-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Sparkles size={18} style={{ color: '#2EC4B6' }} />
-            <span className="tagline-text">Curated travel experiences</span>
+          <div className="tagline-wrapper">
+            <div className="tagline-content">
+              <Sparkles size={16} className="tagline-icon" />
+              <span className="tagline-text">Curated travel experiences</span>
+            </div>
+            <div className="tagline-divider-line"></div>
           </div>
           <h1 className="section-title">Kerala <span className="highlight">Tour</span> Packages</h1>
           <p className="subheading">Explore the paradise of South India with our signature premium tours</p>
