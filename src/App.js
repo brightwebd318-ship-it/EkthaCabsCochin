@@ -7,6 +7,8 @@ import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
 import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
 import FleetPage from './pages/FleetPage';
+import KeralaTourPackages from './pages/KeralaTourPackages';
+import MapSection from './components/MapSection';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
@@ -20,7 +22,9 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/fleet" element={<FleetPage />} />
           <Route path="/book" element={<BookingPage />} />
+          <Route path="/kerala-tour-packages" element={<KeralaTourPackages />} />
         </Routes>
+        <MapSection />
         <Footer />
         <FloatingCallButton />
         <FloatingWhatsAppButton />

@@ -1,9 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
+import munnarImg from '../Kerala Tourism Images/Munnar.jpg';
+import thekkadyImg from '../Kerala Tourism Images/Thekkady.jpg';
+import alleppeyImg from '../Kerala Tourism Images/Alleppey.jpg';
+import varkalaImg from '../Kerala Tourism Images/Varakala.jpg';
+import thiruvananthapuramImg from '../Kerala Tourism Images/Thruvananthapuram.jpg';
+import kovalamImg from '../Kerala Tourism Images/Kovalam.jpg';
+import maduraiImg from '../Kerala Tourism Images/Madurai.jpg';
+import rameshwaramImg from '../Kerala Tourism Images/Rameshwaram.jpg';
+
 
 const Hero = ({ heroImage }) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [currentImage, setCurrentImage] = useState(0);
+    
+    const images = [
+        munnarImg,
+        thekkadyImg,
+        alleppeyImg,
+        varkalaImg,
+        thiruvananthapuramImg,
+        kovalamImg,
+        maduraiImg,
+        rameshwaramImg
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % images.length);
+        }, 5000); // Change image every 5 seconds
+        return () => clearInterval(timer);
+    }, [images.length]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,19 +43,20 @@ const Hero = ({ heroImage }) => {
         <section id="home" className="hero">
             <div className="hero-overlay"></div>
             
-            {/* Video Background Container */}
-            <div className="hero-video-container">
-                <iframe
-                    className="hero-video-iframe"
-                    src="https://www.youtube.com/embed/-H2kZs8dd2k?autoplay=1&mute=1&loop=1&playsinline=1&controls=0&showinfo=0&autohide=1&playlist=-H2kZs8dd2k&rel=0&iv_load_policy=3&enablejsapi=1"
-                    title="Background Video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                ></iframe>
+            {/* Image Background Slider */}
+            <div className="hero-image-container">
+                {images.map((img, index) => (
+                    <img
+                        key={index}
+                        src={img}
+                        alt={`Kerala Destination ${index + 1}`}
+                        className={`hero-image-item ${index === currentImage ? 'active' : ''}`}
+                        loading={index === 0 ? "eager" : "lazy"}
+                    />
+                ))}
             </div>
 
-            <img src={heroImage || 'https://images.unsplash.com/photo-1559291071-70c0e231188e?auto=format&fit=crop&q=80&w=2670'} alt="Premium Cab Service" className="hero-bg" />
+            {/* Remove static heroImage if it exists as we now have a slider */}
 
             <div className="container hero-content">
                 <div className="hero-text">

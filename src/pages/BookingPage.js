@@ -79,6 +79,18 @@ const BookingPage = () => {
             if (firstErrorField) firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
             return;
         }
+
+        const message = `*New Cab Booking Request*\n\n` +
+                        `*Customer Name:* ${form.fullName}\n` +
+                        `*Phone:* ${form.phone}\n` +
+                        `*Pickup Location:* ${form.pickup}\n` +
+                        `*Destination:* ${form.destination}\n` +
+                        `*Pickup Date:* ${form.date}\n` +
+                        `*Pickup Time:* ${form.time}`;
+
+        const whatsappUrl = `https://wa.me/919072836004?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+
         setIsSubmitted(true);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
