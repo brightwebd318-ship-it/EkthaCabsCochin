@@ -3,13 +3,13 @@ import { useLocation } from 'react-router-dom';
 import './FleetPage.css';
 
 // Import high-res premium gallery images
-import swiftImg from '../premium vehicle gallery/swift.jpeg';
-import wagonrImg from '../premium vehicle gallery/wagonr.jpeg';
-import dzireImg from '../premium vehicle gallery/dzire.jpeg';
-import etiosImg from '../premium vehicle gallery/etios.jpeg';
-import innovaImg from '../premium vehicle gallery/innova.jpeg';
-import ertigaImg from '../premium vehicle gallery/ertiga.jpeg';
-import urbaniaImg from '../premium vehicle gallery/urbania.jpeg';
+import swiftImg from '../Premium Vehicle Gallery/swift.jpeg';
+import wagonrImg from '../Premium Vehicle Gallery/wagonr.jpeg';
+import dzireImg from '../Premium Vehicle Gallery/dzire.jpeg';
+import etiosImg from '../Premium Vehicle Gallery/etios.jpeg';
+import innovaImg from '../Premium Vehicle Gallery/innova.jpeg';
+import ertigaImg from '../Premium Vehicle Gallery/ertiga.jpeg';
+import urbaniaImg from '../Premium Vehicle Gallery/urbania.jpeg';
 
 const WA_BASE = 'https://wa.me/919072836004?text=Hello%2C%20I%20want%20to%20enquire%20about%20the%20';
 

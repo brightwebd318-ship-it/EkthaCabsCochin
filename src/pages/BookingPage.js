@@ -11,6 +11,8 @@ const BookingPage = () => {
         destination: '',
         date: '',
         time: '',
+        vehicleType: 'Sedan', // Default
+        passengers: '1-4',    // Default
     });
 
     const [errors, setErrors] = useState({});
@@ -57,6 +59,16 @@ const BookingPage = () => {
             newErrors.time = 'Pickup time is required.';
         }
 
+        // Vehicle Type
+        if (!form.vehicleType) {
+            newErrors.vehicleType = 'Please select a vehicle type.';
+        }
+
+        // Passengers
+        if (!form.passengers) {
+            newErrors.passengers = 'Please select number of passengers.';
+        }
+
         return newErrors;
     };
 
@@ -80,13 +92,17 @@ const BookingPage = () => {
             return;
         }
 
-        const message = `*New Cab Booking Request*\n\n` +
-                        `*Customer Name:* ${form.fullName}\n` +
-                        `*Phone:* ${form.phone}\n` +
-                        `*Pickup Location:* ${form.pickup}\n` +
-                        `*Destination:* ${form.destination}\n` +
-                        `*Pickup Date:* ${form.date}\n` +
-                        `*Pickup Time:* ${form.time}`;
+        const message = `*New Cab Booking Request*\n` +
+                        `------------------------------\n` +
+                        `👤 *Name:* ${form.fullName}\n` +
+                        `📞 *Phone:* ${form.phone}\n` +
+                        `📍 *From:* ${form.pickup}\n` +
+                        `🏁 *To:* ${form.destination}\n` +
+                        `📅 *Date:* ${form.date}\n` +
+                        `⏰ *Time:* ${form.time}\n` +
+                        `🚗 *Vehicle:* ${form.vehicleType}\n` +
+                        `👥 *Passengers:* ${form.passengers}\n` +
+                        `------------------------------`;
 
         const whatsappUrl = `https://wa.me/919072836004?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
@@ -190,11 +206,42 @@ const BookingPage = () => {
                                         />
                                         {errors.time && <span className="error-msg">⚠ {errors.time}</span>}
                                     </div>
+                                    <div className="form-group">
+                                        <label>Vehicle Type</label>
+                                        <select
+                                            name="vehicleType"
+                                            value={form.vehicleType}
+                                            onChange={handleChange}
+                                            className={errors.vehicleType ? 'input-error' : ''}
+                                        >
+                                            <option value="Sedan">Sedan (Dzire/Etios)</option>
+                                            <option value="SUV">SUV (Ertiga/7-Seater)</option>
+                                            <option value="Premium SUV">Premium SUV (Innova Crysta)</option>
+                                            <option value="Luxury Traveller">Luxury Traveller (12-17 Seater)</option>
+                                            <option value="Hatchback">Hatchback (Swift/WagonR)</option>
+                                        </select>
+                                        {errors.vehicleType && <span className="error-msg">⚠ {errors.vehicleType}</span>}
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Passengers</label>
+                                        <select
+                                            name="passengers"
+                                            value={form.passengers}
+                                            onChange={handleChange}
+                                            className={errors.passengers ? 'input-error' : ''}
+                                        >
+                                            <option value="1-4">1 - 4 Passengers</option>
+                                            <option value="5-7">5 - 7 Passengers</option>
+                                            <option value="8-12">8 - 12 Passengers</option>
+                                            <option value="13-17">13 - 17 Passengers</option>
+                                        </select>
+                                        {errors.passengers && <span className="error-msg">⚠ {errors.passengers}</span>}
+                                    </div>
                                 </div>
                             </section>
 
                             <button type="submit" className="btn btn-primary btn-book-large">
-                                Confirm Booking Request
+                                Book Now
                             </button>
                         </form>
                     </div>

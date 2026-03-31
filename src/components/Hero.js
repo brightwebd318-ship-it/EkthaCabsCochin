@@ -14,6 +14,14 @@ import rameshwaramImg from '../Kerala Tourism Images/Rameshwaram.jpg';
 const Hero = ({ heroImage }) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [currentImage, setCurrentImage] = useState(0);
+    const [formData, setFormData] = useState({
+        pickup: '',
+        destination: '',
+        date: '',
+        time: '',
+        name: '',
+        phone: ''
+    });
     
     const images = [
         munnarImg,
@@ -33,9 +41,27 @@ const Hero = ({ heroImage }) => {
         return () => clearInterval(timer);
     }, [images.length]);
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would typically handle the form data
+        
+        const message = `*Quick Cab Inquiry*\n` +
+                        `------------------------------\n` +
+                        `👤 *Name:* ${formData.name}\n` +
+                        `📞 *Phone:* ${formData.phone}\n` +
+                        `📍 *From:* ${formData.pickup}\n` +
+                        `🏁 *To:* ${formData.destination}\n` +
+                        `📅 *Date:* ${formData.date}\n` +
+                        `⏰ *Time:* ${formData.time}\n` +
+                        `------------------------------`;
+
+        const whatsappUrl = `https://wa.me/919072836004?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+        
         setIsSubmitted(true);
     };
 
@@ -74,21 +100,71 @@ const Hero = ({ heroImage }) => {
                             <h3>Quick Booking</h3>
                             <form className="booking-form" onSubmit={handleSubmit}>
                                 <div className="form-group">
+                                    <label>Full Name</label>
+                                    <input 
+                                        type="text" 
+                                        name="name"
+                                        placeholder="Enter your name" 
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required 
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label>Phone Number</label>
+                                    <input 
+                                        type="tel" 
+                                        name="phone"
+                                        placeholder="Enter phone number" 
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        required 
+                                    />
+                                </div>
+                                <div className="form-group">
                                     <label>Pickup Location</label>
-                                    <input type="text" placeholder="Enter pickup location" required />
+                                    <input 
+                                        type="text" 
+                                        name="pickup"
+                                        placeholder="Enter pickup location" 
+                                        value={formData.pickup}
+                                        onChange={handleChange}
+                                        required 
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <label>Destination</label>
-                                    <input type="text" placeholder="Enter destination" required />
+                                    <input 
+                                        type="text" 
+                                        name="destination"
+                                        placeholder="Enter destination" 
+                                        value={formData.destination}
+                                        onChange={handleChange}
+                                        required 
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <label>Date & Time</label>
                                     <div className="form-row">
-                                        <input type="date" className="date-input" required />
-                                        <input type="time" className="time-input" required />
+                                        <input 
+                                            type="date" 
+                                            name="date"
+                                            className="date-input" 
+                                            value={formData.date}
+                                            onChange={handleChange}
+                                            required 
+                                        />
+                                        <input 
+                                            type="time" 
+                                            name="time"
+                                            className="time-input" 
+                                            value={formData.time}
+                                            onChange={handleChange}
+                                            required 
+                                        />
                                     </div>
                                 </div>
-                                <button type="submit" className="btn btn-primary btn-block">Search Availability</button>
+                                <button type="submit" className="btn btn-primary btn-block">Book Now</button>
                             </form>
                         </>
                     ) : (
