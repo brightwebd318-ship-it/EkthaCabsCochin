@@ -20,6 +20,13 @@ const Footer = () => {
         });
     };
 
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     // 2026 Perfect Local SEO Schema for Cab Services
     const localBusinessSchema = {
         "@context": "https://schema.org",
@@ -69,15 +76,15 @@ const Footer = () => {
                             The premier luxury cab service in Cochin, dedicated to providing unparalleled comfort, safety, and reliability for all your travel needs. Experience Kerala like never before.
                         </p>
                         <div className="social-links">
-                            <a href="#" className="social-icon" aria-label="Facebook">
+                            <button className="social-icon" aria-label="Facebook">
                                 <Facebook size={20} />
-                            </a>
-                            <a href="#" className="social-icon" aria-label="Instagram">
+                            </button>
+                            <button className="social-icon" aria-label="Instagram">
                                 <Instagram size={20} />
-                            </a>
-                            <a href="#" className="social-icon" aria-label="Twitter">
+                            </button>
+                            <button className="social-icon" aria-label="Twitter">
                                 <Twitter size={20} />
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -85,11 +92,11 @@ const Footer = () => {
                     <div className="footer-column">
                         <h3>Quick Links</h3>
                         <ul className="footer-links">
-                            <li><a href="#home"><ArrowRight size={14} /> Home</a></li>
-                            <li><a href="#services"><ArrowRight size={14} /> Our Services</a></li>
+                            <li><button className="footer-link" onClick={() => scrollToSection('home')}><ArrowRight size={14} /> Home</button></li>
+                            <li><button className="footer-link" onClick={() => scrollToSection('services')}><ArrowRight size={14} /> Our Services</button></li>
                             <li><a href="/EkthaCabsCochin/fleet"><ArrowRight size={14} /> Luxury Fleet</a></li>
-                            <li><a href="#about"><ArrowRight size={14} /> About Us</a></li>
-                            <li><a href="#contact"><ArrowRight size={14} /> Contact</a></li>
+                            <li><button className="footer-link" onClick={() => scrollToSection('about')}><ArrowRight size={14} /> About Us</button></li>
+                            <li><button className="footer-link" onClick={() => scrollToSection('contact')}><ArrowRight size={14} /> Contact</button></li>
                         </ul>
                     </div>
 
@@ -97,11 +104,11 @@ const Footer = () => {
                     <div className="footer-column">
                         <h3>Our Services</h3>
                         <ul className="footer-links">
-                            <li><a href="#"><ArrowRight size={14} /> Airport Transfers</a></li>
-                            <li><a href="#"><ArrowRight size={14} /> Kerala Tour Packages</a></li>
-                            <li><a href="#"><ArrowRight size={14} /> Sabarimala Service</a></li>
-                            <li><a href="#"><ArrowRight size={14} /> Outstation Cabs</a></li>
-                            <li><a href="#"><ArrowRight size={14} /> Wedding Car Rental</a></li>
+                            <li><button className="service-link"><ArrowRight size={14} /> Airport Transfers</button></li>
+                            <li><button className="service-link"><ArrowRight size={14} /> Kerala Tour Packages</button></li>
+                            <li><button className="service-link"><ArrowRight size={14} /> Sabarimala Service</button></li>
+                            <li><button className="service-link"><ArrowRight size={14} /> Outstation Cabs</button></li>
+                            <li><button className="service-link"><ArrowRight size={14} /> Wedding Car Rental</button></li>
                         </ul>
                     </div>
 
@@ -148,8 +155,8 @@ const Footer = () => {
                         <a href="https://brightwebd.com/" target="_blank" rel="noopener noreferrer"> BrightWebD 31:8</a>
                     </div>
                     <div className="legal-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms & Conditions</a>
+                        <button>Privacy Policy</button>
+                        <button>Terms & Conditions</button>
                     </div>
                 </div>
             </div>

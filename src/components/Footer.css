@@ -60,6 +60,8 @@
     color: #fff;
     transition: all 0.3s ease;
     text-decoration: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 .social-icon:hover {
@@ -98,7 +100,8 @@
     margin-bottom: 12px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links button {
     color: #94a3b8;
     text-decoration: none;
     font-size: 0.95rem;
@@ -106,20 +109,27 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
-.footer-links a svg {
+.footer-links a svg,
+.footer-links button svg {
     opacity: 0;
     transition: all 0.3s ease;
     transform: translateX(-10px);
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links button:hover {
     color: var(--primary);
     transform: translateX(5px);
 }
 
-.footer-links a:hover svg {
+.footer-links a:hover svg,
+.footer-links button:hover svg {
     opacity: 1;
     transform: translateX(0);
 }
@@ -255,13 +265,19 @@
     gap: 24px;
 }
 
-.legal-links a {
+.legal-links a,
+.legal-links button {
     color: #64748b;
     text-decoration: none;
     transition: color 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
-.legal-links a:hover {
+.legal-links a:hover,
+.legal-links button:hover {
     color: var(--primary);
 }
 
