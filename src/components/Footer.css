@@ -281,30 +281,123 @@
     color: var(--primary);
 }
 
-/* Tablet responsiveness */
+/* ===== TABLET (≤1024px) ===== */
 @media (max-width: 1024px) {
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 32px;
+    }
+
+    /* Contact card spans full width on its own row */
+    .footer-contact-card {
+        grid-column: 1 / -1;
     }
 }
 
-/* Mobile responsiveness */
+/* ===== MOBILE (≤768px) ===== */
 @media (max-width: 768px) {
     .main-footer {
-        padding-top: 60px;
+        padding-top: 56px;
     }
 
+    /* Brand full-width, centred */
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 20px;
     }
 
+    /* Brand section spans both columns */
     .footer-brand {
+        grid-column: 1 / -1;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .footer-description {
+        max-width: 90%;
+        font-size: 0.92rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Quick Links & Our Services — side by side, left-aligned within their col */
+    .footer-column {
+        text-align: left;
+    }
+
+    .footer-column h3 {
+        font-size: 1.05rem;
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+    }
+
+    /* Gold underline dashes left-aligned */
+    .footer-column h3::after {
+        left: 0;
+        transform: none;
+        width: 24px;
+    }
+
+    /* Links: left-aligned, arrow always visible */
+    .footer-links a {
+        justify-content: flex-start;
+        font-size: 0.88rem;
+        gap: 6px;
+    }
+
+    /* Always show arrow icon on mobile (no hover needed) */
+    .footer-links a svg {
+        opacity: 1;
+        transform: translateX(0);
+        flex-shrink: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    /* Contact card full-width */
+    .footer-contact-card {
+        grid-column: 1 / -1;
+    }
+
+    .glass-contact-card {
+        padding: 22px 18px;
+    }
+
+    .contact-item {
+        font-size: 0.88rem;
+    }
+
+    /* Footer bottom — stack vertically, centred */
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 14px;
+        text-align: center;
+        padding: 22px 0;
+    }
+
+    .legal-links {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .copyright {
+        font-size: 0.82rem;
+    }
+}
+
+/* ===== SMALL MOBILE (≤480px) ===== */
+@media (max-width: 480px) {
+    /* Stack Quick Links & Our Services vertically on very small screens */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
     }
 
     .footer-column {
@@ -320,13 +413,16 @@
         justify-content: center;
     }
 
-    .footer-bottom {
-        flex-direction: column-reverse;
-        gap: 20px;
-        text-align: center;
+    .footer-links a svg {
+        opacity: 1;
+        transform: translateX(0);
     }
 
-    .social-links {
-        justify-content: center;
+    .footer-brand .footer-logo {
+        font-size: 1.8rem;
+    }
+
+    .glass-contact-card {
+        padding: 18px 14px;
     }
 }
