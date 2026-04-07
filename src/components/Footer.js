@@ -32,9 +32,10 @@ const Footer = () => {
         "@context": "https://schema.org",
         "@type": "TaxiService",
         "name": "Ektha Cabs Cochin",
-        "image": "https://www.ekthacabs.com/logo.png",
-        "@id": "https://www.ekthacabs.com",
-        "url": "https://www.ekthacabs.com",
+        "alternateName": ["Ektha Taxi Kochi", "Ektha Cabs Ernakulam"],
+        "image": "https://brightwebd318-ship-it.github.io/EkthaCabsCochin/favicon.png",
+        "@id": "https://brightwebd318-ship-it.github.io/EkthaCabsCochin/",
+        "url": "https://brightwebd318-ship-it.github.io/EkthaCabsCochin/",
         "telephone": "+918606036004",
         "priceRange": "$$",
         "address": {
@@ -45,6 +46,12 @@ const Footer = () => {
             "postalCode": "683572",
             "addressCountry": "IN"
         },
+        "areaServed": [
+            { "@type": "City", "name": "Cochin" },
+            { "@type": "City", "name": "Kochi" },
+            { "@type": "City", "name": "Ernakulam" },
+            { "@type": "Airport", "name": "Cochin International Airport (COK)" }
+        ],
         "geo": {
             "@type": "GeoCoordinates",
             "latitude": 10.1632,
@@ -55,6 +62,16 @@ const Footer = () => {
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             "opens": "00:00",
             "closes": "23:59"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Taxi Services",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Airport Transfers Kochi" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kerala Tour Packages" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sabarimala Pilgrimage Taxi" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Outstation Cab Service" } }
+            ]
         }
     };
 
@@ -94,7 +111,6 @@ const Footer = () => {
                         <ul className="footer-links">
                             <li><button className="footer-link" onClick={() => scrollToSection('home')}><ArrowRight size={14} /> Home</button></li>
                             <li><button className="footer-link" onClick={() => scrollToSection('services')}><ArrowRight size={14} /> Our Services</button></li>
-                            <li><a href="/EkthaCabsCochin/fleet"><ArrowRight size={14} /> Luxury Fleet</a></li>
                             <li><button className="footer-link" onClick={() => scrollToSection('about')}><ArrowRight size={14} /> About Us</button></li>
                             <li><button className="footer-link" onClick={() => scrollToSection('contact')}><ArrowRight size={14} /> Contact</button></li>
                         </ul>
