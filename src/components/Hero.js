@@ -71,23 +71,26 @@ const Hero = ({ heroImage }) => {
             
             {/* Image Background Slider */}
             <div className="hero-image-container">
-                {images.map((img, index) => (
-                    <img
-                        key={index}
-                        src={img}
-                        alt={`Kerala Destination ${index + 1}`}
-                        className={`hero-image-item ${index === currentImage ? 'active' : ''}`}
-                        loading={index === 0 ? "eager" : "lazy"}
-                    />
-                ))}
+                {images.map((img, index) => {
+                    const destinations = ['Munnar', 'Thekkady', 'Alleppey', 'Varkala', 'Thiruvananthapuram', 'Kovalam', 'Madurai', 'Rameshwaram'];
+                    return (
+                        <img
+                            key={index}
+                            src={img}
+                            alt={`${destinations[index]} Tourism - Premium Taxi Services by Ektha Cabs Cochin`}
+                            className={`hero-image-item ${index === currentImage ? 'active' : ''}`}
+                            loading={index === 0 ? "eager" : "lazy"}
+                        />
+                    );
+                })}
             </div>
 
             {/* Remove static heroImage if it exists as we now have a slider */}
 
             <div className="container hero-content">
                 <div className="hero-text">
-                    <h1 className="hero-title">Experience Premium <span className="highlight">Cab Services</span> in Cochin</h1>
-                    <p className="hero-subtitle">Professional, Reliable, and Luxury Travel Solutions for Airport Transfers, Outstation Trips, and Local Sightseeing.</p>
+                    <h1 className="hero-title">Ektha Cabs Cochin: Premium <span className="highlight">Taxi Services</span> in Kochi</h1>
+                    <p className="hero-subtitle">Professional, Reliable, and Luxury Travel Solutions for Airport Transfers, Outstation Trips, and Curated Kerala Tour Packages.</p>
                     <div className="hero-cta">
                         <Link to="/book" className="btn btn-primary">Book Your Ride</Link>
                         <a href="#services" className="btn btn-outline">Explore Services</a>

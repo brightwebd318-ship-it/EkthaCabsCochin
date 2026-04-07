@@ -143,7 +143,7 @@ const VehicleSlider = () => {
                         <div className="vs-img-wrapper">
                             <img
                                 src={v.image}
-                                alt={v.model}
+                                alt={`${v.model} - Premium Taxi Rental by Ektha Cabs Cochin`}
                                 className="vs-img"
                                 loading="lazy"
                                 draggable="false"

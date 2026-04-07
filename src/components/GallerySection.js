@@ -11,14 +11,14 @@ import fortKochiImg from '../assets/fort_kochi.jpg';
 import innovaImg    from '../assets/innova.jpg';
 
 const galleryItems = [
-    { id: 1, src: kochiImg,     alt: 'Kochi City – Marine Drive',        caption: 'Marine Drive, Kochi' },
-    { id: 2, src: munnarImg,    alt: 'Munnar Tea Plantations',            caption: 'Munnar Hills' },
-    { id: 3, src: innovaImg,    alt: 'Premium Innova Cab Fleet',          caption: 'Our Premium Fleet' },
-    { id: 4, src: alleppeyImg,  alt: 'Alleppey Backwaters Kerala',        caption: 'Alleppey Backwaters' },
-    { id: 5, src: fortKochiImg, alt: 'Fort Kochi Heritage',               caption: 'Fort Kochi' },
-    { id: 6, src: thekkadyImg,  alt: 'Thekkady Periyar Wildlife',         caption: 'Thekkady Periyar' },
-    { id: 7, src: varkalaImg,   alt: 'Varkala Cliff Beach',               caption: 'Varkala Beach' },
-    { id: 8, src: kovalamImg,   alt: 'Kovalam Lighthouse Beach',          caption: 'Kovalam Beach' },
+    { id: 1, src: kochiImg,     alt: 'Kochi City Marine Drive – Premium Cab Services by Ektha Cabs Cochin',        caption: 'Marine Drive, Kochi' },
+    { id: 2, src: munnarImg,    alt: 'Munnar Tea Plantations Kerala – Ektha Cabs Cochin Tour Packages',            caption: 'Munnar Hills' },
+    { id: 3, src: innovaImg,    alt: 'Premium Toyota Innova Cab Fleet – Ektha Cabs Cochin',                       caption: 'Our Premium Fleet' },
+    { id: 4, src: alleppeyImg,  alt: 'Alleppey Backwaters Houseboat – Kerala Cabs by Ektha Cabs Cochin',           caption: 'Alleppey Backwaters' },
+    { id: 5, src: fortKochiImg, alt: 'Fort Kochi Heritage Sightseeing – Ektha Cabs Cochin',                         caption: 'Fort Kochi' },
+    { id: 6, src: thekkadyImg,  alt: 'Thekkady Periyar Wildlife Sanctuary – Travel with Ektha Cabs Cochin',         caption: 'Thekkady Periyar' },
+    { id: 7, src: varkalaImg,   alt: 'Varkala Cliff Beach Kerala – Ektha Cabs Cochin Airport Transfers',            caption: 'Varkala Beach' },
+    { id: 8, src: kovalamImg,   alt: 'Kovalam Lighthouse Beach – Luxury Travel by Ektha Cabs Cochin',              caption: 'Kovalam Beach' },
 ];
 
 const GallerySection = () => {
