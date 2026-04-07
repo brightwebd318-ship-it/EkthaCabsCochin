@@ -105,8 +105,34 @@ const KeralaTourPackages = () => {
     }
   };
 
+  // Structured Data for Tour Packages (SEO 2026)
+  const tourSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": destinations.map((dest, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": `${dest.name} Tour Package - Ektha Cabs`,
+        "description": dest.description,
+        "image": `https://brightwebd318-ship-it.github.io/EkthaCabsCochin/static/media/${dest.name.toLowerCase()}.jpg`,
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "price": dest.price.replace('₹', '').replace(',', ''),
+          "availability": "https://schema.org/InStock",
+          "url": "https://brightwebd318-ship-it.github.io/EkthaCabsCochin/kerala-tour-packages"
+        }
+      }
+    }))
+  };
+
   return (
     <div className="kerala-tour-packages-page">
+      <script type="application/ld+json">
+        {JSON.stringify(tourSchema)}
+      </script>
       <header className="page-header">
         <div className="container">
           <div className="tagline-wrapper">

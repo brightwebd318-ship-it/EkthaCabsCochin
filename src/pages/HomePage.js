@@ -9,6 +9,7 @@ import GallerySection from '../components/GallerySection';
 import VehicleSlider from '../components/VehicleSlider';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
+import FAQ from '../components/FAQ';
 
 const HomePage = () => {
     const { hash } = useLocation();
@@ -35,6 +36,7 @@ const HomePage = () => {
             <VehicleSlider />
             <Services />
             <WhyChooseUs />
+            <FAQ />
         </main>
     );
 };
