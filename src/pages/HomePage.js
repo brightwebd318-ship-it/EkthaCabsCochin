@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import VideoGallery from '../components/VideoGallery';
 import KeralaPackages from '../components/KeralaPackages';
@@ -27,6 +28,11 @@ const HomePage = () => {
 
     return (
         <main>
+            <Helmet>
+                <title>Ektha Cabs Cochin - Premium Taxi & Cab Services in Kochi</title>
+                <meta name="description" content="Book the most reliable and premium taxi service in Cochin. Airport transfers, outstation trips, and 24/7 safe travel in Kochi, Ernakulam, and beyond." />
+                <link rel="canonical" href="https://www.ekthacabscochin.com/" />
+            </Helmet>
             <Hero />
             <VideoGallery />
             <KeralaPackages />

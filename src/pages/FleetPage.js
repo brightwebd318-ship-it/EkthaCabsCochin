@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import './FleetPage.css';
 
 // Import high-res premium gallery images
@@ -118,6 +119,11 @@ const FleetPage = () => {
 
     return (
         <main className="fleet-page">
+            <Helmet>
+                <title>Our Fleet & Luxury Cabs | Ektha Cabs Cochin</title>
+                <meta name="description" content="Explore our premium taxi fleet consisting of Sedans, SUVs, and luxury cars for rent in Kochi. Clean, well-maintained vehicles for safe rides." />
+                <link rel="canonical" href="https://www.ekthacabscochin.com/fleet" />
+            </Helmet>
 
             {/* ── Hero Banner ── */}
             <section className="fp-hero">

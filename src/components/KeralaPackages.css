@@ -178,6 +178,30 @@
     transform: scale(0.98);
 }
 
+.flex-center-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.wa-outline-btn {
+    color: #D4AF37;
+}
+
+.wa-outline-btn svg {
+    flex-shrink: 0;
+}
+
+.wa-outline-btn:hover {
+    background: rgba(37, 211, 102, 0.1) !important;
+    border-color: #25D366 !important;
+    color: #25D366 !important;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25) !important;
+}
+
 /* Modern Premium Image Slider */
 .packages-slider {
     position: relative;

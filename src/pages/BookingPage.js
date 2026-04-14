@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './BookingPage.css';
 
 const BookingPage = () => {
@@ -113,6 +114,11 @@ const BookingPage = () => {
 
     return (
         <div className="booking-page container">
+            <Helmet>
+                <title>Book a Taxi Route | Ektha Cabs Cochin</title>
+                <meta name="description" content="Fast and secure cab booking in Kochi. Reserve your airport transfer or outstation taxi in advance with transparent pricing." />
+                <link rel="canonical" href="https://www.ekthacabscochin.com/book" />
+            </Helmet>
             <div className="booking-header">
                 <h1>Book Your <span className="highlight">Professional</span> Ride</h1>
                 <p>Experience the most reliable cab service in Cochin.</p>
