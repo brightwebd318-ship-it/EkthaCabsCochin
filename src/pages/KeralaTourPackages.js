@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Heart, Compass, Palmtree, Mountain, Landmark, Trees as Tree, Sparkles } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import './KeralaTourPackages.css';
 import munnarImg from '../Kerala Tourism Images/Munnar.jpg';
 import thekkadyImg from '../Kerala Tourism Images/Thekkady.jpg';
@@ -130,6 +131,11 @@ const KeralaTourPackages = () => {
 
   return (
     <div className="kerala-tour-packages-page">
+      <Helmet>
+        <title>Kerala Tour Packages by Cab | Ektha Cabs Cochin</title>
+        <meta name="description" content="Experience God's Own Country with our custom Kerala tour cab packages. Munnar, Alleppey, and Thekkady trips with experienced drivers." />
+        <link rel="canonical" href="https://www.ekthacabscochin.com/kerala-tour-packages" />
+      </Helmet>
       <script type="application/ld+json">
         {JSON.stringify(tourSchema)}
       </script>

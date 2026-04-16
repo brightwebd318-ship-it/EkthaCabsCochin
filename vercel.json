@@ -1,22 +1,8 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": true,
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.ekthacabscochin.com"
-        }
-      ],
-      "destination": "https://ekthacabscochin.com/:path*",
-      "permanent": true
-    }
-  ],
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/((?!static|.*\\..*).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],

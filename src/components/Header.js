@@ -14,7 +14,10 @@ const Header = () => {
     <header className="header">
       <div className="container header-container">
         <div className="logo">
-          <Link to="/" className="logo-link" onClick={() => setIsMenuOpen(false)}>
+          <Link to="/" className="logo-link" onClick={() => {
+            setIsMenuOpen(false);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}>
             <span className="logo-text">Ektha<span className="accent">Cabs</span>Cochin</span>
           </Link>
         </div>

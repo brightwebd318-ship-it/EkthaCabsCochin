@@ -11,6 +11,28 @@
 
     gtag('config', 'AW-18070375078');
   </script>
+  <script>
+    // Single Page Apps for GitHub Pages
+    // https://github.com/rafrex/spa-github-pages
+    (function(l) {
+      if (l.search[1] === '=' ) {
+        var q = l.search.slice(1).split('&').map(function(s) {
+          return s.replace(/~and~/g, '&')
+        }).reduce(function(a, b) {
+          var t = b.split('=');
+          a[t[0]] = t.slice(1).join('=');
+          return a;
+        }, {});
+        if (q.p !== undefined) {
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (q.p || '') +
+            (q.q ? ('?' + q.q) : '') +
+            l.hash
+          );
+        }
+      }
+    }(window.location))
+  </script>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />

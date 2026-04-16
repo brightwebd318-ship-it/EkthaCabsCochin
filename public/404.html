@@ -10,8 +10,8 @@
       // string into just a query string, and then redirects the browser
       // to the new url with only a query string and hash fragment.
       
-      // Set pathSegmentsToKeep to 1 if you are using a custom domain or a repository page (e.g. username.github.io/repo-name/)
-      var pathSegmentsToKeep = 1;
+      // Set pathSegmentsToKeep to 0 for a custom domain, or 1 for a repository page
+      var pathSegmentsToKeep = 0;
 
       var l = window.location;
       l.replace(

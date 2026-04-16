@@ -17,6 +17,10 @@
     align-items: center;
 }
 
+.logo-link {
+    text-decoration: none;
+}
+
 .logo-text {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
