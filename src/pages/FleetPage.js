@@ -3,13 +3,14 @@ import { useLocation } from 'react-router-dom';
 import './FleetPage.css';
 
 // Import high-res premium gallery images
-import swiftImg from '../Premium Vehicle Gallery/swift.jpeg';
-import wagonrImg from '../Premium Vehicle Gallery/wagonr.jpeg';
-import dzireImg from '../Premium Vehicle Gallery/dzire.jpeg';
-import etiosImg from '../Premium Vehicle Gallery/etios.jpeg';
-import innovaImg from '../Premium Vehicle Gallery/innova.jpeg';
-import ertigaImg from '../Premium Vehicle Gallery/ertiga.jpeg';
-import urbaniaImg from '../Premium Vehicle Gallery/urbania.jpeg';
+import swiftImg from '../Premium Vehicle Gallery/maruti swift.jpg';
+import wagonrImg from '../Premium Vehicle Gallery/Maruti_Suzuki-WagonR_.avif';
+import dzireImg from '../fleet/dzire-white.jpg';
+import etiosImg from '../fleet/etios-silver.jpg';
+import etiosWhiteImg from '../fleet/etios-white.jpg';
+import innovaImg from '../Premium Vehicle Gallery/innova-crysta.avif';
+import ertigaImg from '../fleet/ertiga-white.jpg';
+import urbaniaImg from '../Premium Vehicle Gallery/Force-Urbania-Van.avif';
 
 const WA_BASE = 'https://wa.me/919072836004?text=Hello%2C%20I%20want%20to%20enquire%20about%20the%20';
 
