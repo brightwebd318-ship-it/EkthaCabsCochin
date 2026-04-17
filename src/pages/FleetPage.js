@@ -8,7 +8,7 @@ import swiftImg from '../Premium Vehicle Gallery/maruti swift.jpg';
 import wagonrImg from '../Premium Vehicle Gallery/Maruti_Suzuki-WagonR_.avif';
 import dzireImg from '../fleet/dzire-white.jpg';
 import etiosImg from '../fleet/etios-silver.jpg';
-import etiosWhiteImg from '../fleet/etios-white.jpg';
+
 import innovaImg from '../Premium Vehicle Gallery/innova-crysta.avif';
 import ertigaImg from '../fleet/ertiga-white.jpg';
 import urbaniaImg from '../Premium Vehicle Gallery/Force-Urbania-Van.avif';
