@@ -1,0 +1,128 @@
+.faq-section {
+    padding: 6rem 0;
+    background-color: #020617;
+    border-top: 1px solid rgba(255, 215, 0, 0.05);
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.faq-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 215, 0, 0.1);
+    color: #FFD700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 215, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.faq-item.active {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FFD700;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #f1f5f9;
+    font-weight: 600;
+}
+
+.faq-icon {
+    color: #FFD700;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    margin-top: 1rem;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.faq-cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.faq-cta p {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 28px;
+    background: transparent;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #FFD700;
+    color: #020617;
+}
+
+@media (max-width: 991px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}

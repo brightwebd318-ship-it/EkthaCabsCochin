@@ -1,0 +1,50 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules/
+my-cabs-app/node_modules/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+my-cabs-app/coverage/
+
+# production
+/build
+my-cabs-app/build/
+
+# misc
+.DS_Store
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.agents/
+.agent/
+brain/
+
+# next.js
+.next/
+out/
+
+# backups
+old-src/
+old-public/
+old-package.json/
+old-package-lock.json/
+old-vercel.json/
+old-src
+old-public
+old-package.json
+old-package-lock.json
+old-vercel.json
+old-jsconfig.json
+old-eslintrc.json
+

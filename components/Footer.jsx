@@ -1,0 +1,133 @@
+'use client';
+
+import { Facebook, Instagram, Twitter, ChevronUp, MessageCircle, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import './Footer.css';
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TaxiService',
+  name: 'Ektha Cabs Cochin',
+  alternateName: ['Ektha Taxi Kochi', 'Ektha Cabs Ernakulam'],
+  image: 'https://www.ekthacabscochin.com/favicon.png',
+  '@id': 'https://www.ekthacabscochin.com/',
+  url: 'https://www.ekthacabscochin.com/',
+  telephone: '+918606036004',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Ektha Cabs, Nayathode',
+    addressLocality: 'Angamaly, Nedumbassery',
+    addressRegion: 'Kerala',
+    postalCode: '683572',
+    addressCountry: 'IN',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Cochin' },
+    { '@type': 'City', name: 'Kochi' },
+    { '@type': 'City', name: 'Ernakulam' },
+    { '@type': 'Airport', name: 'Cochin International Airport (COK)' },
+  ],
+  geo: { '@type': 'GeoCoordinates', latitude: 10.1632, longitude: 76.3803 },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+    opens: '00:00',
+    closes: '23:59',
+  },
+};
+
+const Footer = () => {
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="main-footer" id="contact">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <div className="footer-top-border"></div>
+      <div className="container">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <div className="footer-logo">Ektha<span>Cabs</span>Cochin</div>
+            <p className="footer-description">The premier luxury cab service in Cochin, dedicated to providing unparalleled comfort, safety, and reliability for all your travel needs. Experience Kerala like never before.</p>
+            <div className="social-links">
+              <button className="social-icon" aria-label="Facebook"><Facebook size={20} /></button>
+              <button className="social-icon" aria-label="Instagram"><Instagram size={20} /></button>
+              <button className="social-icon" aria-label="Twitter"><Twitter size={20} /></button>
+            </div>
+          </div>
+
+          <div className="footer-column">
+            <h3>Quick Links</h3>
+            <ul className="footer-links">
+              <li><button className="footer-link" onClick={() => scrollToSection('home')}><ArrowRight size={14} /> Home</button></li>
+              <li><button className="footer-link" onClick={() => scrollToSection('services')}><ArrowRight size={14} /> Our Services</button></li>
+              <li><button className="footer-link" onClick={() => scrollToSection('about')}><ArrowRight size={14} /> About Us</button></li>
+              <li><button className="footer-link" onClick={() => scrollToSection('contact')}><ArrowRight size={14} /> Contact</button></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <h3>Our Services</h3>
+            <ul className="footer-links">
+              <li><button className="service-link"><ArrowRight size={14} /> Airport Transfers</button></li>
+              <li><button className="service-link"><ArrowRight size={14} /> Kerala Tour Packages</button></li>
+              <li><button className="service-link"><ArrowRight size={14} /> Sabarimala Service</button></li>
+              <li><button className="service-link"><ArrowRight size={14} /> Outstation Cabs</button></li>
+              <li><button className="service-link"><ArrowRight size={14} /> Wedding Car Rental</button></li>
+            </ul>
+          </div>
+
+          <div className="footer-contact-card">
+            <div className="glass-contact-card">
+              <h3>Get In Touch</h3>
+              <div className="contact-list">
+                <a href="tel:+918606036004" className="contact-item"
+                  onClick={(e) => {
+                    if (typeof window.gtag_report_conversion !== 'undefined') {
+                      e.preventDefault();
+                      window.gtag_report_conversion('tel:+918606036004');
+                    }
+                  }}>
+                  <div className="icon-circle"><Phone size={18} /></div>
+                  <span>+91 86060 36004</span>
+                </a>
+                <a href="mailto:Ekthacabs@gmail.com" className="contact-item">
+                  <div className="icon-circle"><Mail size={18} /></div>
+                  <span>Ekthacabs@gmail.com</span>
+                </a>
+                <div className="contact-item">
+                  <div className="icon-circle"><MapPin size={18} /></div>
+                  <span>Nayathode, Kerala 683572</span>
+                </div>
+              </div>
+              <a href="https://wa.me/919072836004" target="_blank" rel="noopener noreferrer" className="footer-whatsapp-btn">
+                <MessageCircle size={20} /> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-middle">
+          <div className="back-to-top" onClick={scrollToTop}><ChevronUp size={24} /></div>
+        </div>
+
+        <div className="footer-bottom">
+          <div className="copyright">
+            © 2026 EkthaCabsCochin. All rights reserved. Designed for{' '}
+            <a href="https://brightwebd.com/" target="_blank" rel="noopener noreferrer"> BrightWebD 31:8</a>
+          </div>
+          <div className="legal-links">
+            <button>Privacy Policy</button>
+            <button>Terms &amp; Conditions</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
