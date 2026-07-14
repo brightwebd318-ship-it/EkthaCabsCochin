@@ -102,6 +102,7 @@
     border-radius: 1.5rem;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    height: 320px;
 }
 .vs-img {
     width: 100%; height: 320px;
@@ -274,6 +275,7 @@
         gap: 2rem;
     }
     .vs-img { height: 260px; }
+    .vs-img-wrapper { height: 260px; }
     .vs-info-col { align-items: center; text-align: center; }
     .vs-seats-badge { align-self: center; }
     .vs-features { justify-content: center; }
@@ -287,5 +289,6 @@
     .vs-tab-icon { font-size: 1.3rem; }
     .vs-showcase { border-radius: 1.25rem; padding: 1.5rem 1.25rem; }
     .vs-img { height: 210px; }
+    .vs-img-wrapper { height: 210px; }
     .vs-gallery-btn, .vs-book-btn { width: 100%; max-width: 300px; justify-content: center; }
 }

@@ -74,7 +74,7 @@ const GallerySection = () => {
           <div className="gl-mobile-track" ref={trackRef}>
             {galleryItems.map((item) => (
               <div key={item.id} className="gl-mobile-card">
-                <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                <div style={{ position: 'relative', width: '100%', height: '200px' }}>
                   <Image src={item.src} alt={item.alt} fill sizes="90vw" className="gl-mobile-img" style={{ objectFit: 'cover' }} />
                 </div>
                 <div className="gl-mobile-caption">{item.caption}</div>
