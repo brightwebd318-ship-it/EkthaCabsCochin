@@ -7,6 +7,6 @@ export default function sitemap() {
     { url: `${baseUrl}/book`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/fleet`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/kerala-tour-packages`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/sabarimala`, lastModified, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${baseUrl}/sabarimalapackage`, lastModified, changeFrequency: 'weekly', priority: 0.95 },
   ];
 }

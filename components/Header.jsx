@@ -29,7 +29,7 @@ const Header = () => {
         <nav className={`nav ${isMenuOpen ? 'nav-active' : ''}`}>
           <Link href="/#home" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
           <Link href="/#services" className="nav-link" onClick={() => setIsMenuOpen(false)}>Services</Link>
-          <Link href="/sabarimala" className="nav-link" onClick={() => setIsMenuOpen(false)}>Sabarimala</Link>
+          <Link href="/sabarimalapackage" className="nav-link" onClick={() => setIsMenuOpen(false)}>Sabarimala Packages</Link>
           <Link href="/fleet" className="nav-link" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
           <Link href="/#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</Link>
           <Link href="/book" className="nav-link btn btn-primary" onClick={() => setIsMenuOpen(false)}>Book Now</Link>

@@ -100,7 +100,7 @@ const SabarimalaService = () => {
               Enquire on WhatsApp
             </button>
             <a
-              href="/sabarimala"
+              href="/sabarimalapackage"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',

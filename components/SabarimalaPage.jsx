@@ -284,6 +284,7 @@ export default function SabarimalaPage() {
   const [customPickup, setCustomPickup] = useState('Cochin International Airport (COK)');
   const [customVehicle, setCustomVehicle] = useState('Toyota Innova Crysta');
   const [paxCount, setPaxCount] = useState('4-6 Pilgrims');
+  const [openFaq, setOpenFaq] = useState(0);
 
   // Helper to check 2026 temple status for selected date
   const getScheduleStatusForDate = (dateStr) => {
@@ -866,6 +867,65 @@ export default function SabarimalaPage() {
                     <CheckCircle2 size={13} className="text-emerald-500" /> Verified Review
                   </span>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Rich Content & FAQ Section */}
+      <section className="sab-seo-faq-section container">
+        <div className="sab-seo-content-block">
+          <span className="sab-sub-tag">Complete Travel Guide</span>
+          <h2 className="sab-section-title">
+            Sabarimala Taxi Services & <span className="sab-gold-text">Pilgrimage Packages</span>
+          </h2>
+          <p className="sab-seo-text">
+            Ektha Cabs Cochin is Kerala’s most trusted provider of <strong>Sabarimala taxi services</strong> and dedicated <strong>Sabarimala packages</strong>. Whether you are arriving at Cochin International Airport (COK), Ernakulam Junction (ERS), or Aluva, we provide seamless <strong>taxi for Sabarimala trip</strong> bookings with 24/7 pickup reliability.
+          </p>
+          <p className="sab-seo-text">
+            Our fleet includes spacious <strong>Sabarimala Innova cab booking</strong> options for families, comfortable sedan cars for small pilgrim groups, and 12 to 17-seater <strong>Sabarimala Tempo Traveller packages</strong> for large Swamy groups. Driven by experienced drivers well-versed with hill routes through Chalakudy, Erumely, and Pathanamthitta to Nilakkal & Pamba.
+          </p>
+        </div>
+
+        <div className="sab-faq-wrapper">
+          <h3 className="sab-faq-heading">Frequently Asked Questions (Sabarimala Trip & Cab Fares)</h3>
+          <div className="sab-faq-list">
+            {[
+              {
+                q: 'How do I book a taxi for Sabarimala trip from Cochin Airport (COK)?',
+                a: 'Booking a cab for Sabarimala is fast and easy. You can click our WhatsApp button or call +91 86060 36004 with your flight arrival time. Our driver will be waiting at the arrivals exit with a placard to take you directly to Nilakkal/Pamba.'
+              },
+              {
+                q: 'What are the popular Sabarimala packages available from Kochi?',
+                a: 'We offer 1-Day Express Packages (Kochi to Pamba & back with 18-24 hour vehicle wait), 2-Day Erumely Petta Thullal packages, and 3-Day Grand Kerala Temple Pilgrimage circuits covering Sabarimala, Chottanikkara, Vaikom, and Guruvayur.'
+              },
+              {
+                q: 'What is the taxi fare from Kochi to Pamba / Nilakkal?',
+                a: 'Our Sabarimala cab fares are transparent and flat-rate with no hidden night charges or driver fees. Fares vary depending on vehicle type (Sedan, Innova Crysta, or Tempo Traveller) and duration. Contact us on WhatsApp for an instant flat-rate quote.'
+              },
+              {
+                q: 'Can the taxi driver wait at Nilakkal parking while we complete darshan?',
+                a: 'Yes! All our Sabarimala packages include vehicle waiting time at Nilakkal/Pamba parking while devotees trek to Sannidhanam for Neyyabhishekam and darshan.'
+              },
+              {
+                q: 'Are 24x7 taxi services available during peak Mandalam and Makaravilakku 2026 season?',
+                a: 'Yes, our taxi services operate 24 hours a day, 7 days a week throughout the 2026 Mandalam (Nov-Dec) and Makaravilakku (Dec-Jan) seasons.'
+              }
+            ].map((faq, fIdx) => (
+              <div key={fIdx} className={`sab-faq-item ${openFaq === fIdx ? 'active' : ''}`}>
+                <button 
+                  className="sab-faq-question"
+                  onClick={() => setOpenFaq(openFaq === fIdx ? null : fIdx)}
+                >
+                  <span>{faq.q}</span>
+                  <ChevronRight className={`sab-faq-arrow ${openFaq === fIdx ? 'rotate' : ''}`} size={20} />
+                </button>
+                {openFaq === fIdx && (
+                  <div className="sab-faq-answer">
+                    <p>{faq.a}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>

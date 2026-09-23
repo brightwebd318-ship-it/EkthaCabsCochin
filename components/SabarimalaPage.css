@@ -1235,6 +1235,103 @@
 }
 
 /* ==========================================================================
+   SEO Content Block & FAQ Accordion
+   ========================================================================== */
+.sab-seo-faq-section {
+  padding: 80px 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.sab-seo-content-block {
+  background: rgba(30, 7, 4, 0.7);
+  border: 1px solid var(--sab-border-gold);
+  border-radius: 20px;
+  padding: 36px;
+  margin-bottom: 50px;
+}
+
+.sab-seo-text {
+  font-size: 1rem;
+  color: var(--sab-text-muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.sab-seo-text strong {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+.sab-faq-wrapper {
+  background: rgba(20, 3, 2, 0.9);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 20px;
+  padding: 36px;
+}
+
+.sab-faq-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 24px;
+}
+
+.sab-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sab-faq-item {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(45, 15, 10, 0.5);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sab-faq-item.active {
+  border-color: var(--sab-gold);
+  background: rgba(45, 15, 10, 0.85);
+}
+
+.sab-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  background: none;
+  border: none;
+  color: #FFF;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sab-faq-arrow {
+  color: var(--sab-gold);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.sab-faq-arrow.rotate {
+  transform: rotate(90deg);
+}
+
+.sab-faq-answer {
+  padding: 0 22px 20px;
+  color: #E2D1C3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 14px;
+}
+
+/* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -1289,5 +1386,10 @@
   .sab-large-wa-btn, .sab-large-call-btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .sab-faq-question {
+    font-size: 0.95rem;
+    padding: 14px 16px;
   }
 }

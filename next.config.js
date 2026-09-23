@@ -14,6 +14,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/sabarimala',
+        destination: '/sabarimalapackage',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
