@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Seasonal Sale Bottom Slider Ticker CSS
+   ========================================================================== */
+.seasonal-ticker-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: linear-gradient(90deg, #1A0302 0%, #7F1D1D 20%, #D97706 50%, #7F1D1D 80%, #1A0302 100%);
+  border-top: 2.5px solid #FFD700;
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(245, 158, 11, 0.4);
+  font-family: inherit;
+}
+
+.seasonal-ticker-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  text-decoration: none;
+  color: #FFFFFF;
+  overflow: hidden;
+  padding: 0 16px;
+  gap: 16px;
+}
+
+.seasonal-ticker-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #000000;
+  color: #FFD700;
+  font-size: 0.8rem;
+  font-weight: 900;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #FFD700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+}
+
+.ticker-flame {
+  color: #FF4500;
+  animation: flameBounce 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes flameBounce {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}
+
+.seasonal-ticker-marquee {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 22s linear infinite;
+}
+
+.seasonal-ticker-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FFFDF5;
+  white-space: nowrap;
+  padding-right: 60px;
+}
+
+.marquee-text strong {
+  color: #FFD700;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.seasonal-ticker-cta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #25D366;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 7px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.seasonal-ticker-link:hover .seasonal-ticker-cta {
+  background: #1EBE5D;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 768px) {
+  .seasonal-ticker-link {
+    height: 46px;
+    padding: 0 10px;
+    gap: 10px;
+  }
+
+  .seasonal-ticker-badge {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+  }
+
+  .marquee-text {
+    font-size: 0.82rem;
+  }
+
+  .seasonal-ticker-cta {
+    font-size: 0.78rem;
+    padding: 5px 12px;
+  }
+}

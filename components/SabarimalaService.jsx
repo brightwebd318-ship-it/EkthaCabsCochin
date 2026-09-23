@@ -80,7 +80,12 @@ const SabarimalaService = () => {
             Sabarimala routes, ensuring a smooth and peaceful pilgrimage journey.
           </p>
           <div className="sab-features">
-            {['Experienced Sabarimala Route Drivers', 'Comfortable & Sanitized Vehicles', 'Pickup from Kochi & Nearby Areas', '24/7 Availability During Season'].map((f, i) => (
+            {[
+              'Experienced Hill Route Drivers',
+              'Multilingual Drivers (Malayalam, English, Hindi, Tamil)',
+              'Comfortable AC Sedans, Innova & Tempo Travellers',
+              'Punctual Pickup from Kochi Airport & Stations 24/7'
+            ].map((f, i) => (
               <div className="sab-feature-item" key={i}>
                 <span className="sab-feature-dot" />
                 <span>{f}</span>

@@ -368,6 +368,10 @@ export default function SabarimalaPage() {
               <span>24/7 Kochi Airport Pickup</span>
             </div>
             <div className="sab-pill-item">
+              <Users size={16} className="text-amber-400" />
+              <span>Drivers Fluent in <strong>Malayalam, English, Hindi & Tamil</strong></span>
+            </div>
+            <div className="sab-pill-item">
               <ShieldCheck size={16} className="text-amber-400" />
               <span>Experienced Hill Drivers</span>
             </div>
@@ -949,15 +953,15 @@ export default function SabarimalaPage() {
           </div>
 
           <div className="sab-reason-card">
-            <div className="sab-reason-icon"><Clock size={28} /></div>
-            <h3>24/7 Airport & Station Pickup</h3>
-            <p>Late night or early morning flight arrival at COK? We coordinate punctual pickups synchronized with your train/flight arrival.</p>
+            <div className="sab-reason-icon"><Users size={28} /></div>
+            <h3>Multilingual Drivers</h3>
+            <p>Our drivers are fluent in Malayalam, English, Hindi, and Tamil, ensuring smooth communication and guidance for devotees from across India.</p>
           </div>
 
           <div className="sab-reason-card">
-            <div className="sab-reason-icon"><Users size={28} /></div>
-            <h3>Devotional Vow Respect</h3>
-            <p>Our drivers are respectful of Ayyappa vows (Vratham), maintain cleanliness, and ensure comfortable halts for fresh-up and prayers.</p>
+            <div className="sab-reason-icon"><Clock size={28} /></div>
+            <h3>24/7 Airport & Station Pickup</h3>
+            <p>Late night or early morning flight arrival at COK? We coordinate punctual pickups synchronized with your train/flight arrival.</p>
           </div>
 
           <div className="sab-reason-card">

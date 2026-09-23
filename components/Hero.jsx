@@ -67,6 +67,10 @@ const Hero = () => {
 
       <div className="container hero-content">
         <div className="hero-text">
+          <Link href="/sabarimalapackage" className="hero-seasonal-banner">
+            <span className="hero-seasonal-fire">🔥 SEASONAL SPECIAL</span>
+            <span>Sabarimala Taxi Packages 2026 — Book Now & Check Timings ➔</span>
+          </Link>
           <h1 className="hero-title">Ektha Cabs Cochin: Premium <span className="highlight">Taxi Services</span> in Kochi</h1>
           <p className="hero-subtitle">Professional, Reliable, and Luxury Travel Solutions for Airport Transfers, Outstation Trips, and Curated Kerala Tour Packages.</p>
           <div className="hero-cta">

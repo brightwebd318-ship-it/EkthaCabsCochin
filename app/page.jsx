@@ -9,6 +9,7 @@ import VehicleSlider from '@/components/VehicleSlider';
 import Services from '@/components/Services';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import FAQ from '@/components/FAQ';
+import SeasonalSaleTicker from '@/components/SeasonalSaleTicker';
 
 export const metadata = {
   title: 'Kochi Airport Taxi & Cab Services in Cochin | Ektha Cabs',
@@ -37,6 +38,7 @@ export default function HomePage() {
       <Services />
       <WhyChooseUs />
       <FAQ />
+      <SeasonalSaleTicker />
     </main>
   );
 }
