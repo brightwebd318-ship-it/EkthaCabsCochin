@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Facebook, Instagram, Twitter, ChevronUp, MessageCircle, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import './Footer.css';
 
@@ -73,11 +74,11 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Our Services</h3>
             <ul className="footer-links">
-              <li><button className="service-link"><ArrowRight size={14} /> Airport Transfers</button></li>
-              <li><button className="service-link"><ArrowRight size={14} /> Kerala Tour Packages</button></li>
-              <li><button className="service-link"><ArrowRight size={14} /> Sabarimala Service</button></li>
-              <li><button className="service-link"><ArrowRight size={14} /> Outstation Cabs</button></li>
-              <li><button className="service-link"><ArrowRight size={14} /> Wedding Car Rental</button></li>
+              <li><Link href="/book" className="service-link"><ArrowRight size={14} /> Airport Transfers</Link></li>
+              <li><Link href="/kerala-tour-packages" className="service-link"><ArrowRight size={14} /> Kerala Tour Packages</Link></li>
+              <li><Link href="/sabarimala" className="service-link"><ArrowRight size={14} /> Sabarimala Packages</Link></li>
+              <li><Link href="/book" className="service-link"><ArrowRight size={14} /> Outstation Cabs</Link></li>
+              <li><Link href="/book" className="service-link"><ArrowRight size={14} /> Wedding Car Rental</Link></li>
             </ul>
           </div>
 
